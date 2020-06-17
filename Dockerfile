@@ -3,7 +3,7 @@ ARG BASE_IMAGE_TAG
 FROM ubuntu:${BASE_IMAGE_TAG}
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PHP_INI_SCAN_DIR="/etc/php/7.2/apache2/conf.d:/var/www/src/docker/etc/php"
+ENV PHP_INI_SCAN_DIR="/etc/php/7.3/apache2/conf.d:/var/www/src/docker/etc/php"
 
 RUN \
       apt-get update && \
