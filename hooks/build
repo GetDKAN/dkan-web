@@ -1,9 +1,9 @@
 #!/bin/bash
 
-[ -z "$UBUNTU_VER" ] && UBUNTU_VER=20.04
+[ -z "$BASE_IMAGE_TAG" ] && BASE_IMAGE_TAG=latest
 
 docker build \
-    --build-arg BASE_IMAGE_TAG="$UBUNTU_VER" \
+    --build-arg BASE_IMAGE_TAG="$BASE_IMAGE_TAG" \
     -f "$DOCKERFILE_PATH" \
     -t "$IMAGE_NAME" \
     .
