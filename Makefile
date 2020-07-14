@@ -2,7 +2,7 @@
 
 TAG ?= latest
 
-UBUNTU_VER ?= 20.04
+BASE_IMAGE_TAG ?= latest
 
 TAG ?= latest
 
@@ -15,7 +15,7 @@ default: build
 
 build:
 	docker build -t $(REPO):$(TAG) \
-        --build-arg BASE_IMAGE_TAG=$(UBUNTU_VER) \
+        --build-arg BASE_IMAGE_TAG=$(BASE_IMAGE_TAG) \
 	./
 
 test:
